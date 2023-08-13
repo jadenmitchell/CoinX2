@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%-user.username.toLowerCase()%>'s Studio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body>
+      <header class="p-3 text-bg-dark">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="#" class="nav-link px-2 text-white">Home</a></li>
+              <li><a href="#" class="nav-link px-2 text-secondary">Studio</a></li>
+              <% if(user){ %>
+                <li><a href="/balance" class="nav-link px-2 text-white">Balance</a></li>
+                <% } %>
+            </ul>
+    
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+            </form>
+    
+            <div class="text-end">
+              <% if(user){ %>
+                <p class="mb-0 text-body-secondary"><%-user.wallet %> BTC</p>
+              <% } else{ %>  
+                <button type="button" class="btn btn-outline-light me-2">Login</button>
+                <button type="button" class="btn btn-warning">Sign-up</button>
+             <% } %>
+            </div>
+          </div>
+        </div>
+      </header>
+    <main class="container">
+        <div class="row g-5">
+            <div class="col-md-8">
+              <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                CoinX Trading Platform
+              </h3>
+        
+              <button type="button" class="btn btn-secondary">Post Trade</button>
+              
+              <article class="blog-post">
+                <h2 class="display-5 link-body-emphasis mb-1">My Trading Activity</h2>
+                <p class="blog-post-meta">Last trade made December 23, 2020 wagering <code>$100</code></p>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Adversary</th>
+                      <th>Wager</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>cashgettentedric8</td>
+                      <td>0.000034 BTC</td>
+                      <td><div class="badge bg-success text-wrap" style="width: 6rem;">
+                        Paid
+                      </div></td>
+                    </tr>
+                    <tr>
+                      <td>vvsmoneytopopp</td>
+                      <td>$150</td>
+                      <td>trade perfecting in 6 seconds.</td>
+                    </tr>
+                    <tr>
+                      <td>coinxadmin2</td>
+                      <td>$1</td>
+                      <td><div class="badge bg-danger text-wrap" style="width: 6rem;">
+                        Deducted
+                      </div></td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td>ionlygetdrawslol</td>
+                      <td>$20</td>
+                      <td><div class="badge bg-secondary text-wrap" style="width: 6rem;">
+                        Equilibrated
+                      </div></td>
+                    </tr>
+                  </tfoot>
+                </table>
+        
+                <p>Download your full account statement</p>
+              </article>
+
+            </div>
+        
+            <div class="col-md-4">
+              <div class="position-sticky" style="top: 2rem;">
+                
+                <div class="p-4">
+                    <h4 class="fst-italic">Participants</h4>
+                    <ol class="list-unstyled">
+                      <li>vvsmoney <div class="badge bg-secondary text-wrap" style="width: 3rem;">
+                        Host
+                      </div></li>
+                      <li>Telegram</li>
+                    </ol>
+                <div>
+                  <h4 class="fst-italic">Active trading</h4>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                        <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                        <div class="col-lg-8">
+                          <h6 class="mb-0">Example blog post title</h6>
+                          <small class="text-body-secondary">January 15, 2023</small>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                        <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                        <div class="col-lg-8">
+                          <h6 class="mb-0">This is another blog post title</h6>
+                          <small class="text-body-secondary">January 14, 2023</small>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                        <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                        <div class="col-lg-8">
+                          <h6 class="mb-0">Longer blog post title: This one has multiple lines!</h6>
+                          <small class="text-body-secondary">January 13, 2023</small>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+        
+                <div class="p-4">
+                  <h4 class="fst-italic">Subscribe to Social Media</h4>
+                  <ol class="list-unstyled">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Telegram</a></li>
+                    <li><a href="#">Discord</a></li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
